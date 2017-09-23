@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170923082319) do
+ActiveRecord::Schema.define(version: 20170923100750) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20170923082319) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "stores", force: :cascade do |t|
+    t.string "name"
+    t.integer "product_id"
+    t.integer "supplier_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_stores_on_product_id"
+    t.index ["supplier_id"], name: "index_stores_on_supplier_id"
+  end
+
   create_table "suppliers", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -35,6 +45,24 @@ ActiveRecord::Schema.define(version: 20170923082319) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_suppliers_on_product_id"
+  end
+
+  create_table "t_supplier_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "supplier_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_t_supplier_products_on_product_id"
+    t.index ["supplier_id"], name: "index_t_supplier_products_on_supplier_id"
+  end
+
+  create_table "table_supplier_products", force: :cascade do |t|
+    t.integer "supplier_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_table_supplier_products_on_product_id"
+    t.index ["supplier_id"], name: "index_table_supplier_products_on_supplier_id"
   end
 
 end

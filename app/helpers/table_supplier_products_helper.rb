@@ -1,0 +1,2 @@
+module TableSupplierProductsHelper
+end
