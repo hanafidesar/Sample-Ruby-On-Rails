@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @tcustomerproduct.customer.name %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @tcustomerproduct.product.name %>
+</p>
+
+<%= link_to 'Edit', edit_tcustomerproduct_path(@tcustomerproduct) %> |
+<%= link_to 'Back', tcustomerproducts_path %>

@@ -10,46 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170924070424) do
+ActiveRecord::Schema.define(version: 20170924101808) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "amount"
   end
 
   create_table "suppliers", force: :cascade do |t|
     t.string "name"
-    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "table_customer_products", force: :cascade do |t|
+  create_table "tcustomerproducts", force: :cascade do |t|
     t.integer "product_id"
     t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "amount"
-    t.index ["customer_id"], name: "index_table_customer_products_on_customer_id"
-    t.index ["product_id"], name: "index_table_customer_products_on_product_id"
+    t.index ["customer_id"], name: "index_tcustomerproducts_on_customer_id"
+    t.index ["product_id"], name: "index_tcustomerproducts_on_product_id"
   end
 
-  create_table "table_supplier_products", force: :cascade do |t|
-    t.integer "supplier_id"
+  create_table "tsupplierproducts", force: :cascade do |t|
     t.integer "product_id"
+    t.integer "supplier_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_table_supplier_products_on_product_id"
-    t.index ["supplier_id"], name: "index_table_supplier_products_on_supplier_id"
+    t.index ["product_id"], name: "index_tsupplierproducts_on_product_id"
+    t.index ["supplier_id"], name: "index_tsupplierproducts_on_supplier_id"
   end
 
 end

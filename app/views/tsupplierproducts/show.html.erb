@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @tsupplierproduct.supplier.name %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @tsupplierproduct.product.name %>
+</p>
+
+<%= link_to 'Edit', edit_tsupplierproduct_path(@tsupplierproduct) %> |
+<%= link_to 'Back', tsupplierproducts_path %>
