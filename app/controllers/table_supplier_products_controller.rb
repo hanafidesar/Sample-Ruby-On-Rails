@@ -5,6 +5,7 @@ class TableSupplierProductsController < ApplicationController
   # GET /table_supplier_products.json
   def index
     @table_supplier_products = TableSupplierProduct.all
+    logger.debug "Person attributes hash: #{@table_supplier_products.inspect}"
   end
 
   # GET /table_supplier_products/1

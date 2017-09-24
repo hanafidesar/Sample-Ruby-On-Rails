@@ -14,6 +14,7 @@ class TableCustomerProductsController < ApplicationController
 
   # GET /table_customer_products/new
   def new
+    @table_customer_products = TableCustomerProduct.all
     @table_customer_product = TableCustomerProduct.new
   end
 
@@ -26,6 +27,8 @@ class TableCustomerProductsController < ApplicationController
   def create
     @table_customer_product = TableCustomerProduct.new(table_customer_product_params)
 
+    logger.info "AHHAHAHAHAH..."
+    logger.debug "Person attributes hash: #{@table_customer_product.inspect}"
     respond_to do |format|
       if @table_customer_product.save
         format.html { redirect_to @table_customer_product, notice: 'Table customer product was successfully created.' }
@@ -69,6 +72,6 @@ class TableCustomerProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def table_customer_product_params
-      params.require(:table_customer_product).permit(:product_id, :customer_id)
+      params.require(:table_customer_product).permit(:product_id, :customer_id, :amount)
     end
 end
