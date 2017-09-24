@@ -21,11 +21,6 @@
     <%= form.text_field :phone, id: :supplier_phone %>
   </div>
 
-  <div class="field">
-    <%= form.label :product_id %>
-    <%= form.collection_select :product_id, Product.all, :id, :name %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>

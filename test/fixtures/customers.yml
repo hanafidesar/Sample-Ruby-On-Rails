@@ -2,10 +2,6 @@
 
 one:
   name: MyString
-  address: MyString
-  product: one
 
 two:
   name: MyString
-  address: MyString
-  product: two

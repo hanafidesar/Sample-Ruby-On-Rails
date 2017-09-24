@@ -17,7 +17,7 @@ class SuppliersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create supplier" do
     assert_difference('Supplier.count') do
-      post suppliers_url, params: { supplier: { name: @supplier.name, phone: @supplier.phone, product_id: @supplier.product_id } }
+      post suppliers_url, params: { supplier: { name: @supplier.name, phone: @supplier.phone } }
     end
 
     assert_redirected_to supplier_url(Supplier.last)
@@ -34,7 +34,7 @@ class SuppliersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update supplier" do
-    patch supplier_url(@supplier), params: { supplier: { name: @supplier.name, phone: @supplier.phone, product_id: @supplier.product_id } }
+    patch supplier_url(@supplier), params: { supplier: { name: @supplier.name, phone: @supplier.phone } }
     assert_redirected_to supplier_url(@supplier)
   end
 

@@ -3,9 +3,7 @@
 one:
   name: MyString
   phone: MyString
-  product: one
 
 two:
   name: MyString
   phone: MyString
-  product: two

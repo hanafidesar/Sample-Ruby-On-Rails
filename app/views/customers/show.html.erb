@@ -5,15 +5,5 @@
   <%= @customer.name %>
 </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @customer.address %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @customer.product.name %>
-</p>
-
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

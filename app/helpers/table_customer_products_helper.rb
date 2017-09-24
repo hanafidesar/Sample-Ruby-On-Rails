@@ -1,0 +1,2 @@
+module TableCustomerProductsHelper
+end
