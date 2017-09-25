@@ -1,8 +1,13 @@
+
+<%= render 'layouts/header'  %>
+
+<div class="container">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Tcustomerproducts</h1>
+<h1>Customer Products</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Product</th>
@@ -26,4 +31,8 @@
 
 <br>
 
-<%= link_to 'New Tcustomerproduct', new_tcustomerproduct_path %>
+<button class="btn btn-grey pull-right">
+<%= link_to 'Create', new_tcustomerproduct_path %>
+</button>
+
+</div>

@@ -1,6 +1,6 @@
-app/models/product.rb 947ce5598f38b15b793b73e7e674962835eed298
-app/models/customer.rb 782439506c35261298029f683665d79cf787a98a
-app/models/supplier.rb cc0d5a9082dbc037d9fa68c733767dfc2281e36d
+app/models/product.rb f142831267b603779d7cc6a1aa7c8e0bbf0b707f
+app/models/customer.rb 8f8c857d026327a46fb4907b66ce077391be382b
+app/models/supplier.rb 900b39f9218a3db53bc7ac81a50910e18827f61c
 app/jobs/application_job.rb 9a24c3e30cfb517943d8774df4695ba794bfd69d
 app/helpers/products_helper.rb 167a17e0e4bcbc69fae1beda5bb272bf29be65da
 app/models/tcustomerproduct.rb 1999bb4367cd0457fb9178e587e9659746111063

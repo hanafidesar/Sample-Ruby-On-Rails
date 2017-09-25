@@ -1,8 +1,12 @@
+
+<%= render 'layouts/header'  %>
+
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Customers</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -29,4 +33,8 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+<button class="btn btn-grey pull-right">
+<%= link_to 'Create', new_customer_path %>
+</button>
+
+</div>

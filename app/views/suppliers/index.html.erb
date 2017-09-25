@@ -1,8 +1,13 @@
+
+<%= render 'layouts/header'  %>
+
+<div class="container">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Suppliers</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -24,4 +29,8 @@
 
 <br>
 
-<%= link_to 'New Supplier', new_supplier_path %>
+<button class="btn btn-grey pull-right">
+<%= link_to 'Create', new_supplier_path %>
+</button>
+
+</div>
